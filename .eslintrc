@@ -1,0 +1,26 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true,
+    },
+    "settings": {
+        "ecmascript": 6,
+        "jsx": true,
+    },
+    "plugins": [
+        "react",
+        "jsx",
+    ],
+    "rules": {
+        "strict": 0,
+        "quotes": 0,
+        "no-unused-vars": 0,
+        "camelcase": 0,
+        "no-underscore-dangle": 0,
+        "jsx/uses-factory": [1, {"pragma": "JSX"}],
+        "jsx/factory-in-scope": [1, {"pragma": "JSX"}],
+        "jsx/mark-used-vars": 1,
+        "jsx/no-undef": 1
+    }
+}
