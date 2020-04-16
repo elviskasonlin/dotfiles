@@ -34,3 +34,6 @@ alias cdu="cd ~/Code_Design"
 
 # git
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# ssh
+alias nasadmin="ssh elviskasonlinadmin@192.168.0.114 -p 600"

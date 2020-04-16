@@ -1,0 +1,113 @@
+" /////////////////////
+" El's Custom Vim Setup
+" /////////////////////
+
+" Main essentials setup
+syntax on
+
+set expandtab tabstop=2 shiftwidth=2
+set path=$PWD/**
+set t_Co=256
+
+let mapleader = ","
+
+" ////////////////////
+" /////OWN TWEAKS/////
+" ////////////////////
+
+" Sets vim in no compatibility mode
+set nocp
+
+" Enable mouse
+set mouse=a
+
+" Tabs & Spaces Tweaks
+set tabstop=2 shiftwidth=2 expandtab
+
+" Remapping nav keys j & k
+nnoremap j k
+nnoremap k j
+
+" Remapping ; & : for : and :! respectively
+nnoremap ; :
+nnoremap : :!
+
+" Remapping ESC to ALT+J
+inoremap kj <ESC>
+
+" Showing stuff
+set ruler " Ruler at the side
+set showcmd "Shows current cmd at the bottom right.
+" set list " Shows \n using $ and shows tab as ^I
+
+" Setting hybrid line numbers
+set number " Line Number
+set relativenumber " Sets relative numbers for use with <num>j & <num>k
+
+" Converting tabs to spaces
+nnoremap <leader>cta :retab
+nnoremap <leader>ctc :.retab
+
+" Go to current cursor
+nnoremap <leader>we :e <CR>
+
+" Filetype
+filetype plugin on
+filetype plugin indent on
+
+" Enable code folding
+set nofoldenable
+set foldnestmax=10
+set foldlevel=2
+augroup vimrc
+  au BufReadPre * setlocal foldmethod=indent
+  au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+augroup END
+
+" Vim Search improvements
+set incsearch "Sets incremental search (or in other words, search as you type)
+set hlsearch  "Hightlight items found in search
+set ic "Ignores case
+
+" Move cursor to one past last character in normal mode
+set virtualedit=onemore
+
+" Set automatic indenting, C-style
+set cindent
+
+" Disable strict backspace.
+set backspace=indent,eol,start
+
+" Buffer tweaks
+" :ls, lists open buffers
+
+set switchbuf=usetab
+nnoremap <F8> :sbnext<CR>
+nnoremap <S-F8> :sbprevious<CR>
+
+nnoremap <leader>lb :ls<CR>
+nnoremap [ :bp!<CR>
+nnoremap ] :bn!<CR>
+nnoremap <leader>t :enew<CR> " create new buffer
+nnoremap <leader>xt :bd! <CR>
+
+" Tab tweaks
+" :tabs, lists all tabs & their buffers.
+" :tabn
+" :tabp
+" :tabm <number>
+" :tabfirst
+" :tablast
+" :tabe
+
+" Window tweaks
+" To close the window, keep the buffer, ctrl-w + c
+" To close other windows, keep current window, ctrl-w + o
+" To distribute width of open windows, ctrl-w + =
+
+nnoremap <leader>swh :topleft vnew<CR>
+nnoremap <leader>swl :botright vnew<CR>
+nnoremap <leader>swj :topleft new<cr>
+nnoremap <leader>swk :botright new<cr>
+
+nnoremap <leader>c :close!<CR>

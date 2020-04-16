@@ -22,7 +22,7 @@ set nocp
 set mouse=a
 
 " Tabs & Spaces Tweaks
-set tabstop=4 shiftwidth=4 expandtab
+set tabstop=2 shiftwidth=2 expandtab
 
 " Remapping nav keys j & k
 nnoremap j k
@@ -142,6 +142,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 " Fuzzy searching
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
+" Indent guidelines.
+Plug 'https://github.com/Yggdroot/indentLine'
 
 " ////////NEW ITEMS//////
 " Git interface
@@ -156,6 +158,12 @@ Plug 'https://github.com/severin-lemaignan/vim-minimap'
 Plug 'https://github.com/vim-syntastic/syntastic'
 " YouCompleteMe (Auto completion engine)
 Plug 'Valloric/YouCompleteMe'
+" Language Server Client (LSC)
+Plug 'https://github.com/natebosch/vim-lsc'
+
+" ////////LSC ADDITIONS///////
+" Dart language for LSC
+Plug 'dart-lang/dart-vim-plugin'
 
 " ////////SYNTAX HIGHLIGHT///////
 " JSON
@@ -168,6 +176,16 @@ Plug 'https://github.com/bfrg/vim-cpp-modern'
 Plug 'https://github.com/pangloss/vim-javascript'
 " JSX
 Plug 'https://github.com/mxw/vim-jsx'
+" MD
+Plug 'gabrielelana/vim-markdown'
+" Dart
+Plug 'dart-lang/dart-vim-plugin'
+
+
+"(Normal) <Space> Changes status of current item. List becomes checklist, checklist
+" becomes checked etc.
+" (Normal) <Leader>ft Format furrent table
+" (Normal/Visual) <Leader>e Edit current code block in another buffer
 
 " Plug set-up end
 call plug#end()
@@ -244,3 +262,10 @@ let g:ctrlp_working_path_mode = 'a'
 
 " Vim JSX
 let g:jsx_ext_required = 0
+
+" Indent Guidelines
+let g:indentLine_char = '|'
+nnoremap <leader><leader>i :IndentLinesToggle
+
+" Language Server Client (LSC)
+let g:lsc_auto_map = v:true
