@@ -21,7 +21,7 @@ Process of installing essentials.
 5. Node (via NVM)
 6. Ruby Version Manager
 7. Ruby (via rvm)
-9. Pyenv (via Homebrew)
+9. Pyenv and pyenv-virtualenv (via Homebrew)
 10. Other CL Tools (tree, wget, via homebrew)
 11. XQuartz (via homebrew cask)
 12. Coocapods (requires ruby)
