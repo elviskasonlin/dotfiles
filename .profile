@@ -14,9 +14,6 @@ export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
 
-# Source flutter
-export PATH="$HOME/Code_Design/03_others/installedPkgs/flutter/bin:$PATH"
-
 # SQLite
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/sqlite/lib"

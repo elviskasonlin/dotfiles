@@ -25,8 +25,8 @@ set mouse=a
 set tabstop=2 shiftwidth=2 expandtab
 
 " Remapping nav keys j & k
-nnoremap j k
-nnoremap k j
+" nnoremap j k
+" nnoremap k j
 
 " Remapping ; & : for : and :! respectively
 nnoremap ; :
