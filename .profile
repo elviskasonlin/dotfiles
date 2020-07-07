@@ -39,9 +39,3 @@ export PKG_CONFIG_PATH="/usr/local/opt/opencv@3/lib/pkgconfig"
 # Ruby Version Manager
 export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# Pyenv and pyenv-virtualenv
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
-fi

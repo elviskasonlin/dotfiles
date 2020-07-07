@@ -1,5 +1,5 @@
 " /////////////////////
-" El's Custom Vim Setup
+" Elv-s Custom Vim Setup
 " /////////////////////
 
 " Main essentials setup
@@ -181,6 +181,11 @@ Plug 'gabrielelana/vim-markdown'
 " Dart
 Plug 'dart-lang/dart-vim-plugin'
 
+" ////////LANG-SPECIFIC ADDITIONS///////
+" Python Pep8 Indent
+Plug 'Vimjas/vim-python-pep8-indent'
+
+
 
 "(Normal) <Space> Changes status of current item. List becomes checklist, checklist
 " becomes checked etc.
@@ -234,12 +239,14 @@ let g:minimap_toggle='<leader>mmt'
 nnoremap <leader>[ :lprevious
 nnoremap <leader>] :lnext
 let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_enable_balloons = 1
 let g:syntastic_auto_jump = 2
 let g:syntastic_loc_list_height = 6
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_python_checkers = ['pylint']
 
 " C++ syntax
 let g:c_no_curly_error=1
