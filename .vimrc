@@ -5,7 +5,6 @@
 " Main essentials setup
 syntax on
 
-set expandtab tabstop=2 shiftwidth=2
 set path=$PWD/**
 set t_Co=256
 
@@ -157,7 +156,7 @@ Plug 'https://github.com/severin-lemaignan/vim-minimap'
 " Syntastic (Linting)
 Plug 'https://github.com/vim-syntastic/syntastic'
 " YouCompleteMe (Auto completion engine)
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 " Language Server Client (LSC)
 Plug 'https://github.com/natebosch/vim-lsc'
 
@@ -222,12 +221,12 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 " YouCompleteMe
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_collect_identifiers_from_tags_files = 1
+" let g:ycm_seed_identifiers_with_syntax = 1
+" let g:ycm_collect_identifiers_from_tags_files = 1
 
-let g:ycm_key_list_select_completion = ['<TAB>', '<C-N>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<S-TAB>', '<C-P>', '<Up>']
-let g:ycm_key_invoke_completion = '<C-F>'
+" let g:ycm_key_list_select_completion = ['<TAB>', '<C-N>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<S-TAB>', '<C-P>', '<Up>']
+" let g:ycm_key_invoke_completion = '<C-F>'
 
 " Vim Minimap
 let g:minimap_show='<leader>mms'

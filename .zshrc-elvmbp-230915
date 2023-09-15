@@ -131,6 +131,24 @@ export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 export PATH=$PATH:/Volumes/Data/sdrive/personal/financial/Beancount/beancount/bin
 export PYTHONPATH=$PYTHONPATH:/Volumes/Data/sdrive/personal/financial/Beancount/beancount
 
+# QT5
+# If you need to have qt@5 first in your PATH
+export PATH="/usr/local/opt/qt@5/bin:$PATH"
+# For compilers to find qt@5 you may need to set:
+export LDFLAGS="-L/usr/local/opt/qt@5/lib"
+export CPPFLAGS="-I/usr/local/opt/qt@5/include"
+# For pkg-config to find qt@5 you may need to set:
+export PKG_CONFIG_PATH="/usr/local/opt/qt@5/lib/pkgconfig"
+
+# ICU Libs
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+# For compilers to find icu4c you may need to set:
+export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+# For pkg-config to find icu4c you may need to set:
+export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
+
+# RVM
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-
